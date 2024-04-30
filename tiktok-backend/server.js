@@ -15,7 +15,7 @@ app.use((req, res, next) => {
     next(); 
 })
 //db config
-const connection_url = "mongodb+srv://Hadi258:Haider123@tiktok-clone.galvc.mongodb.net/tiktokclone?retryWrites=true&w=majority"
+const connection_url = process.env.MONGO_URI
 
 mongoose.connect(connection_url, {
     //   useNewUrlPareser: true,
